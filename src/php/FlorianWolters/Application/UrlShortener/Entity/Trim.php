@@ -2,9 +2,7 @@
 namespace FlorianWolters\Application\UrlShortener\Entity;
 
 use Symfony\Component\Validator\Mapping\ClassMetadata;
-use Symfony\Component\Validator\Constraints\NotBlank;
-use Symfony\Component\Validator\Constraints\Type;
-use Symfony\Component\Validator\Constraints\Url as UrlConstraint;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @Entity
@@ -65,10 +63,22 @@ class Trim
 
     public static function loadValidatorMetadata(ClassMetadata $metadata)
     {
-        $metadata->addPropertyConstraint('originalUrl', new NotBlank);
-        $metadata->addPropertyConstraint('originalUrl', new UrlConstraint);
+        $metadata->addPropertyConstraint('originalUrl', new Assert\NotBlank);
+        $metadata->addPropertyConstraint('originalUrl', new Assert\Url);
+        $metadata->addPropertyConstraint(
+            'originalUrl',
+            new Assert\Length(['min' => 6, 'max' => 255])
+        );
 
-        $metadata->addPropertyConstraint('trimPath', new NotBlank);
-        $metadata->addPropertyConstraint('trimPath', new Type('string'));
+        $metadata->addPropertyConstraint('trimPath', new Assert\NotBlank);
+        $metadata->addPropertyConstraint('trimPath', new Assert\Type('string'));
+        $metadata->addPropertyConstraint(
+            'trimPath',
+            new Assert\Length(['min' => 3, 'max' => 30])
+        );
+        $metadata->addPropertyConstraint(
+            'trimPath',
+            new Assert\RegEx('/^[a-z0-9\-\_]+$/')
+        );
     }
 }
