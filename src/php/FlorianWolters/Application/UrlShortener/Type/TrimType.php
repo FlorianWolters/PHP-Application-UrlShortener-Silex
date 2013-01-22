@@ -2,7 +2,8 @@
 namespace FlorianWolters\Application\UrlShortener\Type;
 
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\FormBuilderInterface ;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 class TrimType extends AbstractType
 {
@@ -15,5 +16,11 @@ class TrimType extends AbstractType
     public function getName()
     {
         return 'trim';
+    }
+    public function setDefaultOptions(OptionsResolverInterface $resolver)
+    {
+        $resolver->setDefaults([
+            'data_class' => 'FlorianWolters\Application\UrlShortener\Entity\Trim'
+        ]);
     }
 }
