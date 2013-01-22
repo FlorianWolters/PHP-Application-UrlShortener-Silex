@@ -4,22 +4,18 @@ namespace FlorianWolters\Application\UrlShortener\Controller;
 use Silex\Application;
 
 use FlorianWolters\Application\UrlShortener\Entity\Url;
+use FlorianWolters\Application\UrlShortener\Type\TrimType;
 
 class TrimController
 {
     public function indexAction(Application $app)
     {
-        $url = new Url;
-        $url->setOriginalUrl('http://google.de');
+        $trim = new Url;
 
         /* @var $formFactory Symfony\Component\Form\FormFactoryInterface */
         $formFactory = $app['form.factory'];
-        /* @var $formBuilder Symfony\Component\Form\FormBuilderInterface */
-        $formBuilder = $formFactory->createBuilder('form', $url);
         /* @var $form Symfony\Component\Form\FormInterface */
-        $form = $formBuilder->add('originalUrl', 'url')
-            ->add('trimmedUrl', 'text')
-            ->getForm();
+        $form = $formFactory->create(new TrimType, $trim);
 
         /* @var $request Symfony\Component\HttpFoundation\Request */
         $request = $app['request'];
