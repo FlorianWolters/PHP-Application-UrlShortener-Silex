@@ -9,7 +9,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 class Trim
 {
-    /** 
+    /**
      * @var integer
      *
      * @Id @Column(type="integer")
@@ -39,6 +39,8 @@ class Trim
     public function setId($id)
     {
         $this->id = $id;
+
+        return $this;
     }
 
     public function getOriginalUrl()
@@ -49,6 +51,8 @@ class Trim
     public function setOriginalUrl($originalUrl)
     {
         $this->originalUrl = $originalUrl;
+
+        return $this;
     }
 
     public function getTrimPath()
@@ -59,6 +63,8 @@ class Trim
     public function setTrimPath($trimPath)
     {
         $this->trimPath = $trimPath;
+
+        return $this;
     }
 
     public static function loadValidatorMetadata(ClassMetadata $metadata)
