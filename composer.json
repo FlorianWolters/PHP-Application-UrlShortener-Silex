@@ -1,0 +1,25 @@
+{
+    "name": "florian-wolters/application-url-shortener",
+    "description": "TODO.",
+    "authors": [
+        {
+            "name": "Florian Wolters",
+            "email": "wolters.fl@gmail.com",
+            "homepage": "http://blog.florianwolters.de",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "silex/silex": "dev-master",
+        "symfony/form": ">=2.1",
+        "symfony/translation": ">=2.1",
+        "symfony/twig-bridge": ">=2.1",
+        "twig/twig": ">=1.1"
+    },
+    "autoload": {
+        "psr-0": {
+            "FlorianWolters": "src/php"
+        }
+    }
+}
