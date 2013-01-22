@@ -6,6 +6,7 @@ use Silex\Provider\FormServiceProvider;
 use Silex\Provider\TranslationServiceProvider;
 use Silex\Provider\TwigServiceProvider;
 use Silex\Provider\UrlGeneratorServiceProvider;
+use Silex\Provider\ValidatorServiceProvider;
 use Dflydev\Silex\Provider\DoctrineOrm\DoctrineOrmServiceProvider;
 use FlorianWolters\Application\UrlShortener\UrlShortenerControllerProvider;
 
@@ -16,7 +17,7 @@ $app = new Application;
 $app->register(new DoctrineServiceProvider, [
     "db.options" => [
         "driver" => "pdo_sqlite",
-        "path" => "./../data/UrlShortener.db",
+        "path" => "./../data/UrlShortener.db"
     ]
 ]);
 $app->register(new DoctrineOrmServiceProvider, [
@@ -26,7 +27,7 @@ $app->register(new DoctrineOrmServiceProvider, [
             [
                 "type" => "annotation",
                 "namespace" => "FlorianWolters\Application\UrlShortener\Entity",
-                "path" => __DIR__ . "/../src/php/FlorianWolters/Application/UrlShortener/Entity",
+                "path" => __DIR__ . "/../src/php/FlorianWolters/Application/UrlShortener/Entity"
             ]
         ]
     ]
@@ -37,6 +38,7 @@ $app->register(new TwigServiceProvider, [
     'twig.path' => __DIR__ . '/views',
 ]);
 $app->register(new UrlGeneratorServiceProvider);
+$app->register(new ValidatorServiceProvider);
 
 $app->mount('/', new UrlShortenerControllerProvider);
 
