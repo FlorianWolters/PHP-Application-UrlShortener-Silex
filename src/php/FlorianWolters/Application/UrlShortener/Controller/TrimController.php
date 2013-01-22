@@ -26,7 +26,9 @@ class TrimController
             if (true === $form->isValid()) {
                 $trim = $form->getData();
                 $app['orm.em']->persist($trim);
-                $app['orm.em']->flush();               
+                $app['orm.em']->flush();
+
+                return $app->redirect('new_trim');
             }
         }
 
