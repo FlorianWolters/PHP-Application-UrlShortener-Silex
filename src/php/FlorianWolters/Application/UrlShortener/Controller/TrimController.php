@@ -24,8 +24,9 @@ class TrimController
             $form->bind($request);
 
             if (true === $form->isValid()) {
-                $data = $form->getData();
-                // TODO
+                $trim = $form->getData();
+                $app['orm.em']->persist($trim);
+                $app['orm.em']->flush();               
             }
         }
 

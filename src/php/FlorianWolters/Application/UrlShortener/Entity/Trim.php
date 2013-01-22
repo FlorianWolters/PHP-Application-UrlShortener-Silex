@@ -12,20 +12,26 @@ use Symfony\Component\Validator\Constraints\Url as UrlConstraint;
 class Trim
 {
     /** 
+     * @var integer
+     *
      * @Id @Column(type="integer")
      * @GeneratedValue
      */
     private $id;
 
     /**
+     * @var string
+     *
      * @Column(type="text")
      */
     private $originalUrl;
 
     /**
+     * @var string
+     *
      * @Column(type="text")
      */
-    private $trimmedUrl;
+    private $trimPath;
 
     public function getId()
     {
@@ -47,14 +53,14 @@ class Trim
         $this->originalUrl = $originalUrl;
     }
 
-    public function getTrimmedUrl()
+    public function getTrimPath()
     {
-        return $this->trimmedUrl;
+        return $this->trimPath;
     }
 
-    public function setTrimmedUrl($trimmedUrl)
+    public function setTrimPath($trimPath)
     {
-        $this->trimmedUrl = $trimmedUrl;
+        $this->trimPath = $trimPath;
     }
 
     public static function loadValidatorMetadata(ClassMetadata $metadata)
@@ -62,7 +68,7 @@ class Trim
         $metadata->addPropertyConstraint('originalUrl', new NotBlank);
         $metadata->addPropertyConstraint('originalUrl', new UrlConstraint);
 
-        $metadata->addPropertyConstraint('trimmedUrl', new NotBlank);
-        $metadata->addPropertyConstraint('trimmedUrl', new Type('string'));
+        $metadata->addPropertyConstraint('trimPath', new NotBlank);
+        $metadata->addPropertyConstraint('trimPath', new Type('string'));
     }
 }

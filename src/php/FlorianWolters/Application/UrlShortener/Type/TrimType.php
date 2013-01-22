@@ -9,7 +9,7 @@ class TrimType extends AbstractType
     public function buildForm(FormBuilderInterface  $builder, array $options)
     {
         $builder->add('originalUrl', 'url')
-            ->add('trimmedUrl', 'text');
+            ->add('trimPath', 'text');
     }
 
     public function getName()
