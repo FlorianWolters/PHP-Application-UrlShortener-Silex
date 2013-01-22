@@ -3,14 +3,14 @@ namespace FlorianWolters\Application\UrlShortener\Controller;
 
 use Silex\Application;
 
-use FlorianWolters\Application\UrlShortener\Entity\Url;
+use FlorianWolters\Application\UrlShortener\Entity\Trim;
 use FlorianWolters\Application\UrlShortener\Type\TrimType;
 
 class TrimController
 {
     public function indexAction(Application $app)
     {
-        $trim = new Url;
+        $trim = new Trim;
 
         /* @var $formFactory Symfony\Component\Form\FormFactoryInterface */
         $formFactory = $app['form.factory'];

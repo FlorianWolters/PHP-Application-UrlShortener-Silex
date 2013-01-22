@@ -6,11 +6,36 @@ use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\Constraints\Type;
 use Symfony\Component\Validator\Constraints\Url as UrlConstraint;
 
-class Url
+/**
+ * @Entity
+ */
+class Trim
 {
+    /** 
+     * @Id @Column(type="integer")
+     * @GeneratedValue
+     */
+    private $id;
+
+    /**
+     * @Column(type="text")
+     */
     private $originalUrl;
 
+    /**
+     * @Column(type="text")
+     */
     private $trimmedUrl;
+
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
 
     public function getOriginalUrl()
     {
