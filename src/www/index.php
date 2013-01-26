@@ -9,7 +9,12 @@ use Silex\Provider\ValidatorServiceProvider;
 use Dflydev\Silex\Provider\DoctrineOrm\DoctrineOrmServiceProvider;
 use FlorianWolters\Application\UrlShortener\UrlShortenerControllerProvider;
 
-require_once __DIR__ . '/../../vendor/autoload.php';
+\error_reporting(-1);
+
+/**
+ * Include the *Composer* autoloader.
+ */
+require __DIR__ . '/../../vendor/autoload.php';
 
 $app = new Application;
 
