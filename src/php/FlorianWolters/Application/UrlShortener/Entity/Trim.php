@@ -73,14 +73,14 @@ class Trim
         $metadata->addPropertyConstraint('originalUrl', new Assert\Url);
         $metadata->addPropertyConstraint(
             'originalUrl',
-            new Assert\Length(['min' => 6, 'max' => 255])
+            new Assert\Length(array('min' => 6, 'max' => 255))
         );
 
         $metadata->addPropertyConstraint('trimPath', new Assert\NotBlank);
         $metadata->addPropertyConstraint('trimPath', new Assert\Type('string'));
         $metadata->addPropertyConstraint(
             'trimPath',
-            new Assert\Length(['min' => 3, 'max' => 30])
+            new Assert\Length(array('min' => 3, 'max' => 30))
         );
         $metadata->addPropertyConstraint(
             'trimPath',
