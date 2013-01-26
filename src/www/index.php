@@ -9,7 +9,7 @@ use Silex\Provider\UrlGeneratorServiceProvider;
 use Silex\Provider\ValidatorServiceProvider;
 use Dflydev\Silex\Provider\DoctrineOrm\DoctrineOrmServiceProvider;
 use FlorianWolters\Application\UrlShortener\UrlShortenerControllerProvider;
-
+echo "Correct directory";
 require_once __DIR__ . '/../../vendor/autoload.php';
 
 $app = new Application;
