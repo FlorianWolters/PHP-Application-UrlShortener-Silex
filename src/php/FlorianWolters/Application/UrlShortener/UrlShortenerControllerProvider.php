@@ -12,12 +12,12 @@ class UrlShortenerControllerProvider implements ControllerProviderInterface
     public function connect(Application $app)
     {
         $controllers = $app['controllers_factory'];
-
         $controllers->match(
             '/',
-            __NAMESPACE__ . '\Controller\TrimController::indexAction',
-            array('get', 'post')
-        )->bind('url_new');
+            __NAMESPACE__ . '\Controller\TrimController::indexAction'
+        )
+        ->method('GET|POST')
+        ->bind('trim_create');
 
         return $controllers;
     }

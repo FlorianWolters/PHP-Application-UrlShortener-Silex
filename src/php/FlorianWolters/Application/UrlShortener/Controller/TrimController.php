@@ -28,7 +28,9 @@ class TrimController
                 $app['orm.em']->persist($trim);
                 $app['orm.em']->flush();
 
-                return $app->redirect('new_trim');
+                return $app->redirect(
+                    $app['url_generator']->generate('trim_create')
+                );
             }
         }
 
