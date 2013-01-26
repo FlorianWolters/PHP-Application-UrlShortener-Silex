@@ -1,6 +1,6 @@
 {
     "name": "florian-wolters/application-url-shortener",
-    "description": "TODO.",
+    "description": "A simple web application to shorten an Uniform Resource Locator (URL).",
     "authors": [
         {
             "name": "Florian Wolters",
@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "php": ">=5.4",
+        "php": ">=5.3",
         "ext-pdo_sqlite": "*",
         "dflydev/doctrine-orm-service-provider": "dev-master",
         "doctrine/orm": ">=2.3",

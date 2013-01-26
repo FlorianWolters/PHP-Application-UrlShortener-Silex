@@ -1,5 +1,5 @@
 {
-    "hash": "7855ad3b3f679abb83c885730c3e504c",
+    "hash": "2ae726511a431a9816b6efeb8ba33b32",
     "packages": [
         {
             "name": "dflydev/doctrine-orm-service-provider",
@@ -320,12 +320,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/fabpot/Silex.git",
-                "reference": "7c05e116b2875d90ecdc608db347ccbf7bb9a705"
+                "reference": "a23c221e609a17dfc2923066e1680149b7678cf9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/fabpot/Silex/archive/7c05e116b2875d90ecdc608db347ccbf7bb9a705.zip",
-                "reference": "7c05e116b2875d90ecdc608db347ccbf7bb9a705",
+                "url": "https://github.com/fabpot/Silex/archive/a23c221e609a17dfc2923066e1680149b7678cf9.zip",
+                "reference": "a23c221e609a17dfc2923066e1680149b7678cf9",
                 "shasum": ""
             },
             "require": {
@@ -337,7 +337,6 @@
                 "symfony/routing": ">=2.1,<2.3-dev"
             },
             "require-dev": {
-                "monolog/monolog": ">=1.0.0,<1.2-dev",
                 "twig/twig": ">=1.8.0,<2.0-dev",
                 "swiftmailer/swiftmailer": "4.2.*",
                 "doctrine/dbal": ">=2.2.0,<2.4.0-dev",
@@ -353,14 +352,16 @@
                 "symfony/translation": ">=2.1,<2.3-dev",
                 "symfony/twig-bridge": ">=2.1,<2.3-dev",
                 "symfony/validator": ">=2.1,<2.3-dev",
-                "symfony/serializer": ">=2.1,<2.3-dev"
+                "symfony/serializer": ">=2.1,<2.3-dev",
+                "symfony/dom-crawler": ">=2.1,<2.3-dev",
+                "symfony/options-resolver": ">=2.1,<2.3-dev"
             },
             "suggest": {
                 "symfony/browser-kit": ">=2.1,<2.3-dev",
                 "symfony/css-selector": ">=2.1,<2.3-dev",
                 "symfony/dom-crawler": ">=2.1,<2.3-dev"
             },
-            "time": "2013-01-21 15:15:34",
+            "time": "2013-01-25 06:59:19",
             "type": "library",
             "extra": {
                 "branch-alias": {

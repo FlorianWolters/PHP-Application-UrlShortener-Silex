@@ -7,7 +7,7 @@ use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 class TrimType extends AbstractType
 {
-    public function buildForm(FormBuilderInterface  $builder, array $options)
+    public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('originalUrl', 'url')
             ->add('trimPath', 'text');
@@ -19,8 +19,10 @@ class TrimType extends AbstractType
     }
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
-        $resolver->setDefaults([
-            'data_class' => 'FlorianWolters\Application\UrlShortener\Entity\Trim'
-        ]);
+        $resolver->setDefaults(
+            array(
+                'data_class' => 'FlorianWolters\Application\UrlShortener\Entity\Trim'
+            )
+        );
     }
 }

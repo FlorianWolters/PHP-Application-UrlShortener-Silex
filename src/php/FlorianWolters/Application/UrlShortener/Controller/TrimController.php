@@ -34,7 +34,7 @@ class TrimController
 
         return $app['twig']->render(
             'form.twig',
-            ['form' => $form->createView()]
+            array('form' => $form->createView())
         );
     }
 }

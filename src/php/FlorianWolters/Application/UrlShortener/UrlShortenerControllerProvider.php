@@ -14,8 +14,9 @@ class UrlShortenerControllerProvider implements ControllerProviderInterface
         $controllers = $app['controllers_factory'];
 
         $controllers->match(
-            '/', __NAMESPACE__ . '\Controller\TrimController::indexAction',
-            ['get', 'post']
+            '/',
+            __NAMESPACE__ . '\Controller\TrimController::indexAction',
+            array('get', 'post')
         )->bind('url_new');
 
         return $controllers;
