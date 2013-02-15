@@ -1,5 +1,5 @@
 {
-    "hash": "2ae726511a431a9816b6efeb8ba33b32",
+    "hash": "14e3d0b5a71a57bd764af46ff1186bc9",
     "packages": [
         {
             "name": "dflydev/doctrine-orm-service-provider",
@@ -16,8 +16,8 @@
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3",
                 "doctrine/orm": ">=2.3,<3.0",
+                "php": ">=5.3.3",
                 "pimple/pimple": "1.*@dev"
             },
             "require-dev": {
@@ -59,11 +59,11 @@
             ],
             "description": "Doctrine ORM Service Provider",
             "keywords": [
-                "silex",
-                "orm",
+                "cilex",
                 "doctrine",
+                "orm",
                 "pimple",
-                "cilex"
+                "silex"
             ]
         },
         {
@@ -128,11 +128,11 @@
             "description": "Common Library for Doctrine projects",
             "homepage": "http://www.doctrine-project.org",
             "keywords": [
-                "collections",
-                "spl",
-                "eventmanager",
                 "annotations",
-                "persistence"
+                "collections",
+                "eventmanager",
+                "persistence",
+                "spl"
             ]
         },
         {
@@ -150,8 +150,8 @@
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2",
-                "doctrine/common": "2.3.*"
+                "doctrine/common": "2.3.*",
+                "php": ">=5.3.2"
             },
             "time": "2013-01-07 20:03:43",
             "type": "library",
@@ -193,8 +193,8 @@
             "homepage": "http://www.doctrine-project.org",
             "keywords": [
                 "database",
-                "persistence",
                 "dbal",
+                "persistence",
                 "queryobject"
             ]
         },
@@ -213,9 +213,9 @@
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2",
-                "ext-pdo": "*",
                 "doctrine/dbal": "2.3.*",
+                "ext-pdo": "*",
+                "php": ">=5.3.2",
                 "symfony/console": "2.*"
             },
             "suggest": {
@@ -310,8 +310,8 @@
             "description": "Pimple is a simple Dependency Injection Container for PHP 5.3",
             "homepage": "http://pimple.sensiolabs.org",
             "keywords": [
-                "dependency injection",
-                "container"
+                "container",
+                "dependency injection"
             ]
         },
         {
@@ -320,12 +320,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/fabpot/Silex.git",
-                "reference": "a23c221e609a17dfc2923066e1680149b7678cf9"
+                "reference": "c421eab3c4ca9d106cc5b68266d58adece8636cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/fabpot/Silex/archive/a23c221e609a17dfc2923066e1680149b7678cf9.zip",
-                "reference": "a23c221e609a17dfc2923066e1680149b7678cf9",
+                "url": "https://api.github.com/repos/fabpot/Silex/zipball/c421eab3c4ca9d106cc5b68266d58adece8636cd",
+                "reference": "c421eab3c4ca9d106cc5b68266d58adece8636cd",
                 "shasum": ""
             },
             "require": {
@@ -337,31 +337,31 @@
                 "symfony/routing": ">=2.1,<2.3-dev"
             },
             "require-dev": {
-                "twig/twig": ">=1.8.0,<2.0-dev",
-                "swiftmailer/swiftmailer": "4.2.*",
                 "doctrine/dbal": ">=2.2.0,<2.4.0-dev",
-                "symfony/security": ">=2.1,<2.3-dev",
-                "symfony/config": ">=2.1,<2.3-dev",
-                "symfony/locale": ">=2.1,<2.3-dev",
-                "symfony/form": ">=2.1,<2.3-dev",
+                "swiftmailer/swiftmailer": "4.2.*",
                 "symfony/browser-kit": ">=2.1,<2.3-dev",
+                "symfony/config": ">=2.1,<2.3-dev",
                 "symfony/css-selector": ">=2.1,<2.3-dev",
+                "symfony/dom-crawler": ">=2.1,<2.3-dev",
                 "symfony/finder": ">=2.1,<2.3-dev",
+                "symfony/form": ">=2.1,<2.3-dev",
+                "symfony/locale": ">=2.1,<2.3-dev",
                 "symfony/monolog-bridge": ">=2.1,<2.3-dev",
+                "symfony/options-resolver": ">=2.1,<2.3-dev",
                 "symfony/process": ">=2.1,<2.3-dev",
+                "symfony/security": ">=2.1,<2.3-dev",
+                "symfony/serializer": ">=2.1,<2.3-dev",
                 "symfony/translation": ">=2.1,<2.3-dev",
                 "symfony/twig-bridge": ">=2.1,<2.3-dev",
                 "symfony/validator": ">=2.1,<2.3-dev",
-                "symfony/serializer": ">=2.1,<2.3-dev",
-                "symfony/dom-crawler": ">=2.1,<2.3-dev",
-                "symfony/options-resolver": ">=2.1,<2.3-dev"
+                "twig/twig": ">=1.8.0,<2.0-dev"
             },
             "suggest": {
                 "symfony/browser-kit": ">=2.1,<2.3-dev",
                 "symfony/css-selector": ">=2.1,<2.3-dev",
                 "symfony/dom-crawler": ">=2.1,<2.3-dev"
             },
-            "time": "2013-01-25 06:59:19",
+            "time": "2013-02-13 11:44:19",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -549,12 +549,12 @@
                 "symfony/options-resolver": "2.1.*"
             },
             "require-dev": {
-                "symfony/validator": "2.1.*",
-                "symfony/http-foundation": "2.1.*"
+                "symfony/http-foundation": "2.1.*",
+                "symfony/validator": "2.1.*"
             },
             "suggest": {
-                "symfony/validator": "2.1.*",
-                "symfony/http-foundation": "2.1.*"
+                "symfony/http-foundation": "2.1.*",
+                "symfony/validator": "2.1.*"
             },
             "time": "2013-01-11 13:37:17",
             "type": "library",
@@ -772,8 +772,8 @@
             "description": "Symfony OptionsResolver Component",
             "homepage": "http://symfony.com",
             "keywords": [
-                "configuration",
                 "config",
+                "configuration",
                 "options"
             ]
         },
@@ -796,15 +796,15 @@
                 "php": ">=5.3.3"
             },
             "require-dev": {
+                "doctrine/common": ">=2.2,<2.4-dev",
                 "symfony/config": "2.1.*",
-                "symfony/yaml": "2.1.*",
                 "symfony/http-kernel": "2.1.*",
-                "doctrine/common": ">=2.2,<2.4-dev"
+                "symfony/yaml": "2.1.*"
             },
             "suggest": {
+                "doctrine/common": ">=2.2,<2.4-dev",
                 "symfony/config": "2.1.*",
-                "symfony/yaml": "2.1.*",
-                "doctrine/common": ">=2.2,<2.4-dev"
+                "symfony/yaml": "2.1.*"
             },
             "time": "2013-01-09 08:51:07",
             "type": "library",
@@ -902,18 +902,18 @@
             "require-dev": {
                 "symfony/form": "2.1.*",
                 "symfony/routing": "2.1.*",
+                "symfony/security": "2.1.*",
                 "symfony/templating": "2.1.*",
                 "symfony/translation": "2.1.*",
-                "symfony/yaml": "2.1.*",
-                "symfony/security": "2.1.*"
+                "symfony/yaml": "2.1.*"
             },
             "suggest": {
                 "symfony/form": "2.1.*",
                 "symfony/routing": "2.1.*",
+                "symfony/security": "2.1.*",
                 "symfony/templating": "2.1.*",
                 "symfony/translation": "2.1.*",
-                "symfony/yaml": "2.1.*",
-                "symfony/security": "2.1.*"
+                "symfony/yaml": "2.1.*"
             },
             "time": "2013-01-17 15:20:05",
             "type": "symfony-bridge",
@@ -993,22 +993,22 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.12.1",
+            "version": "v1.12.2",
             "source": {
                 "type": "git",
                 "url": "git://github.com/fabpot/Twig.git",
-                "reference": "v1.12.1"
+                "reference": "v1.12.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/fabpot/Twig/archive/v1.12.1.zip",
-                "reference": "v1.12.1",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/v1.12.2",
+                "reference": "v1.12.2",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.4"
             },
-            "time": "2013-01-15 20:03:52",
+            "time": "2013-02-09 18:21:53",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1047,7 +1047,6 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "dflydev/doctrine-orm-service-provider": 20,
         "silex/silex": 20
     }
 }

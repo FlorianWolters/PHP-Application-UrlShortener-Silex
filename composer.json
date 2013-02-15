@@ -12,9 +12,9 @@
     "require": {
         "php": ">=5.3",
         "ext-pdo_sqlite": "*",
-        "dflydev/doctrine-orm-service-provider": "dev-master",
+        "dflydev/doctrine-orm-service-provider": ">=1.0",
         "doctrine/orm": ">=2.3",
-        "silex/silex": "dev-master",
+        "silex/silex": "1.0.x-dev",
         "symfony/config": ">=2.1",
         "symfony/form": ">=2.1",
         "symfony/translation": ">=2.1",
