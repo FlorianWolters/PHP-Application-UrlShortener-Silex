@@ -3,7 +3,7 @@
     <type>org.netbeans.modules.php.project</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/php-project/1">
-            <name>FlorianWolters\Application\UrlShortener</name>
+            <name>FlorianWolters\Application\UrlShortener-Silex</name>
         </data>
     </configuration>
 </project>
