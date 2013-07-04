@@ -1,0 +1,17 @@
+debug: true
+config:
+  page:
+    title: UrlShortener-Silex
+    description: An URL shortener, built with the PHP microframework Silex
+    year: 2013
+    author: Florian Wolters
+    google_analytics: UA-38608559-1
+
+  short_url:
+    length: 8
+
+  qr_code:
+    path: img/qr
+    width: 200
+    height: 200
+    qzone: 4
