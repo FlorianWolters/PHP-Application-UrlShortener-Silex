@@ -7,16 +7,25 @@ use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 class TrimType extends AbstractType
 {
+    /**
+     * {@inheritdoc}
+     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('originalUrl', 'url')
-            ->add('trimPath', 'text');
+        $builder->add('originalUrl', 'url');
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function getName()
     {
         return 'trim';
     }
+
+    /**
+     * {@inheritdoc}
+     */
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(

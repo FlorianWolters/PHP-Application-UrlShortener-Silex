@@ -1,6 +1,9 @@
-<form action="{{ path('trim_create') }}" method="post" {{ form_enctype(form) }}>
-    {{ form_label(form) }}
-    {{ form_errors(form) }}
-    {{ form_widget(form) }}
-    <input type="submit" />
+<form class="form-horizontal" action="{{ path('trim_create') }}" method="post" {{ form_enctype(form) }}>
+    <fieldset>
+        <legend>Paste your long URL here:</legend>
+        {{ form_widget(form.originalUrl, {'attr': {'class': 'input-xxlarge', 'placeholder': 'http://example.org'} }) }}
+        {{ form_errors(form.originalUrl) }}
+        {{ form_rest(form) }}
+        <button class="btn" type="submit">Shorten URL</button>
+    </fieldset>
 </form>

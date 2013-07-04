@@ -1,0 +1,50 @@
+<main role="main">
+    <section>
+        <header id="introduction">
+            <h2>Introduction</h2>
+            This is a simple web application which allows you to shorten an <abbr title="Uniform Resource Locator">URL</abbr>. It has been created with the <abbr title="PHP: Hypertext Preprocessor">PHP</abbr> microframework <a href="http://silex.sensiolabs.org">Silex</a>.
+        </header>
+
+        {% if trim %}
+        {% set shortUrl = app.request.uriForPath(app.request.baseurl ~ '/' ~ trim.trimPath) %}
+        <article>
+            <h2>Result</h2>
+            <p><a href="{{ shortUrl }}">{{ shortUrl }}</a> redirects to <a href="{{ trim.originalUrl }}">{{ trim.originalUrl }}</a>.</p>
+            <p><img src="{{ app.request.baseurl }}/img/qr/{{ trim.id }}.png" alt="QR code for {{ shortUrl }}"></p>
+        </article>
+        {% endif %}
+
+        <article>
+            <h2>Shorten a new URL</h2>
+            {% include 'form.twig' %}
+            <p>All URLs are public and can be accessed by anyone.</p>
+        </article>
+
+        <article>
+            <h2>Overview of shortened URLs</h2>
+            {% if trim_all %}
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <th>QR code</th>
+                    <th>Shortened URL</th>
+                    <th>Original URL</th>
+                    <th>Number of times called</th>
+                </thead>
+                <tbody>
+                {% for trim in trim_all %}
+                    {% set shortUrl = app.request.uriForPath(app.request.baseurl ~ '/' ~ trim.trimPath) %}
+                    <tr>
+                        <td><img src="{{ app.request.baseurl }}/img/qr/{{ trim.Id }}.png" alt="QR code for {{ shortUrl }}"></td>
+                        <td><a href="{{ shortUrl }}"<a>{{ shortUrl }}</a></td>
+                        <td><a href="{{ trim.originalUrl }}"<a>{{ trim.originalUrl }}</a></td>
+                        <td>{{ trim.timesCalled }}</td>
+                    </tr>
+                {% endfor %}
+                <tbody>
+            </table>
+            {% else %}
+            <p>There do not exist any shortened URLs.</p>
+            {% endif %}
+        </article>
+    </section>
+</main>
