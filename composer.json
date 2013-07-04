@@ -1,6 +1,6 @@
 {
-    "name": "florian-wolters/application-url-shortener",
-    "description": "A simple web application to shorten an Uniform Resource Locator (URL).",
+    "name": "florian-wolters/application-urlshortener-silex",
+    "description": "A simple web application to shorten an Uniform Resource Locator (URL), built with the PHP microframework Silex.",
     "authors": [
         {
             "name": "Florian Wolters",
@@ -13,14 +13,21 @@
         "php": ">=5.3",
         "ext-pdo_sqlite": "*",
         "dflydev/doctrine-orm-service-provider": ">=1.0",
-        "doctrine/orm": ">=2.3",
-        "silex/silex": "1.0.x-dev",
-        "symfony/config": ">=2.1",
-        "symfony/form": ">=2.1",
-        "symfony/translation": ">=2.1",
-        "symfony/twig-bridge": ">=2.1",
-        "symfony/validator": ">=2.1",
-        "twig/twig": ">=1.1"
+        "doctrine/orm": ">=2.3.4",
+        "florianwolters/component-core-stringutils": ">=0.3",
+        "florianwolters/component-service-quickresponse": "dev-master",
+        "igorw/config-service-provider": ">=1.2",
+        "kriswallsmith/assetic": ">=1.1",
+        "mheap/silex-assetic": "dev-master",
+        "silex/silex": ">=1.1.0",
+        "symfony/config": ">=2.3",
+        "symfony/form": ">=2.3",
+        "symfony/translation": ">=2.3",
+        "symfony/twig-bridge": ">=2.3",
+        "symfony/validator": ">=2.3",
+        "symfony/yaml": ">=2.3",
+        "twig/twig": ">=1.13",
+        "twitter/bootstrap": ">=2.3"
     },
     "autoload": {
         "psr-0": {
